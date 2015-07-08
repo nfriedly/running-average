@@ -16,7 +16,7 @@ var RunningAverage = require('running-average');
 
 // create an instance
 var runningAverage = new RunningAverage({
-  windowSize: 4 // how many recent numbers to consider when calculating average
+  windowSize: 4 // how many recent numbers to consider when calculating average (default is 100)
 });
 
 // push a number
