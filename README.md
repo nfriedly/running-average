@@ -12,9 +12,30 @@ $ npm install --save running-average
 ## Usage
 
 ```js
-var runningAverage = require('running-average');
+var RunningAverage = require('running-average');
 
-runningAverage('Rainbow');
+// create an instance
+var runningAverage = new RunningAverage({
+  windowSize: 4 // how many recent numbers to consider when calculating average
+});
+
+// push a number
+runningAverage.push(1);
+
+// or a few numbers
+runningAverage.push(2, 3, 4);
+
+// get the current average any time you want
+runningAverage.getAverage(); // => 2.5
+
+// add some more numbers
+runningAverage.push(4,4,4,4);
+
+// get an updated average (which only takes into account the last `windowSize` numbers)
+runningAverage.getAverage(); // => 4
+
+// oh, and it's chainable too!
+runningAverage.push(1).push(3).getAverage(); // => 3
 ```
 
 ## License
