@@ -1,6 +1,6 @@
 {
   "name": "running-average",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Memory-efficient module that accepts an unlimited quantity of numbers and returns the average of the most recent n numbers",
   "homepage": "",
   "repository": "nfriedly/running-average",
