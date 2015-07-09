@@ -27,13 +27,13 @@ describe('running-average', function () {
     assert.equal(avg.getAverage(), 15);
   });
 
-  it('should accept arrays of numbers', function() {
+  it('should accept arrays of numbers', function () {
     var avg = new RunningAverage();
     avg.push([10, 20]);
     assert.equal(avg.getAverage(), 15);
   });
 
-  it('should accept multiple arrays of numbers', function() {
+  it('should accept multiple arrays of numbers', function () {
     var avg = new RunningAverage();
     avg.push([10, 20], [30, 40]);
     assert.equal(avg.getAverage(), 25);

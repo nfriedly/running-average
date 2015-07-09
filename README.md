@@ -40,8 +40,7 @@ runningAverage.push(10).push(11).getAverage(); // => 6
 
 ```
 
-
-
+Also see version 1.0 for a `windowSize` option to limit the average to the last *n* numbers, but be aware that it uses a less efficient algorithm.
 
 ## License
 
