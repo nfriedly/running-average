@@ -1,5 +1,5 @@
 # running-average [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Memory-efficient module that accepts an unlimited quantity of numbers and returns the average of the most recent n numbers
+> Memory-efficient module that tracks the average value of an unlimited quantity of numbers
 
 
 ## Install
@@ -15,9 +15,7 @@ $ npm install --save running-average
 var RunningAverage = require('running-average');
 
 // create an instance
-var runningAverage = new RunningAverage({
-  windowSize: 4 // how many recent numbers to consider when calculating average (default is 100)
-});
+var runningAverage = new RunningAverage();
 
 // push a number
 runningAverage.push(1);
@@ -25,18 +23,25 @@ runningAverage.push(1);
 // or a few numbers
 runningAverage.push(2, 3, 4);
 
+// or an array of numbers
+runningAverage.push([5, 6, 7]);
+
 // get the current average any time you want
-runningAverage.getAverage(); // => 2.5
-
-// add some more numbers
-runningAverage.push(4,4,4,4);
-
-// get an updated average (which only takes into account the last `windowSize` numbers)
 runningAverage.getAverage(); // => 4
 
+// add some more numbers
+runningAverage.push(8, 9);
+
+// get an updated average 
+runningAverage.getAverage(); // => 5
+
 // oh, and it's chainable too!
-runningAverage.push(1).push(3).getAverage(); // => 3
+runningAverage.push(10).push(11).getAverage(); // => 6
+
 ```
+
+
+
 
 ## License
 

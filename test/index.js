@@ -21,21 +21,38 @@ describe('running-average', function () {
     assert.equal(avg.getAverage(), 15);
   });
 
-  it('should accept muliple numbers at once', function () {
+  it('should accept multiple numbers at once', function () {
     var avg = new RunningAverage();
     avg.push(10, 20);
     assert.equal(avg.getAverage(), 15);
   });
 
-  it('push method should be chainable', function () {
+  it('should accept arrays of numbers', function() {
+    var avg = new RunningAverage();
+    avg.push([10, 20]);
+    assert.equal(avg.getAverage(), 15);
+  });
+
+  it('should accept multiple arrays of numbers', function() {
+    var avg = new RunningAverage();
+    avg.push([10, 20], [30, 40]);
+    assert.equal(avg.getAverage(), 25);
+  });
+
+  it('should have a chainable push method', function () {
     var avg = new RunningAverage();
     assert.equal(avg.push(10, 20).getAverage(), 15);
   });
 
-  it('should omit older inputs', function () {
-    var avg = new RunningAverage({windowSize: 4});
-    avg.push(1000,2,2,2,2);
-    assert.equal(avg.getAverage(), 2);
+  it('should not care about input order', function () {
+    var nums = [3, 5, 1000, 9999999];
+    var avg = new RunningAverage();
+    avg.push(nums);
+
+    var revAvg = new RunningAverage();
+    revAvg.push(nums.reverse());
+
+    assert.equal(avg.getAverage(), revAvg.getAverage());
   });
 
   it ('should accept strings that can be converted to numbers', function () {
