@@ -1,6 +1,6 @@
 {
   "name": "running-average",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Memory-efficient module that tracks the average value of an unlimited quantity of numbers",
   "homepage": "https://github.com/nfriedly/running-average",
   "repository": "nfriedly/running-average",
