@@ -1,8 +1,8 @@
 {
   "name": "running-average",
   "version": "2.0.1",
-  "description": "Memory-efficient module that accepts an unlimited quantity of numbers and returns the average of the most recent n numbers",
-  "homepage": "",
+  "description": "Memory-efficient module that tracks the average value of an unlimited quantity of numbers",
+  "homepage": "https://github.com/nfriedly/running-average",
   "repository": "nfriedly/running-average",
   "author": {
     "name": "Nathan Friedly",

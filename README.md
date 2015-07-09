@@ -1,4 +1,4 @@
-# running-average [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# running-average [![NPM version][npm-image]][npm-url] ![Bower Version][bower-image] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > Memory-efficient module that tracks the average value of an unlimited quantity of numbers
 
 
@@ -8,11 +8,17 @@
 $ npm install --save running-average
 ```
 
+or
+
+```sh
+$ bower install approximate-number
+```
+
 
 ## Usage
 
 ```js
-var RunningAverage = require('running-average');
+var RunningAverage = require('running-average'); // or use window.RunningAverage in a browser w/out Require.js or Browserify
 
 // create an instance
 var runningAverage = new RunningAverage();
@@ -53,3 +59,4 @@ MIT © [Nathan Friedly](http://nfriedly.com/)
 [travis-url]: https://travis-ci.org/nfriedly/running-average
 [daviddm-image]: https://david-dm.org/nfriedly/running-average.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/nfriedly/running-average
+[bower-image]: http://badge.fury.io/bo/running-average.svg
