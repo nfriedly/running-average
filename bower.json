@@ -1,0 +1,32 @@
+{
+  "name": "running-average",
+  "version": "2.0.2",
+  "homepage": "https://github.com/nfriedly/running-average",
+  "authors": [
+    "Nathan Friedly <nathan@nfriedly.com>"
+  ],
+  "description": "Memory-efficient module that tracks the average value of an unlimited quantity of numbers",
+  "main": "lib/running-average.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "average",
+    "running",
+    "window",
+    "mean",
+    "arithmetic",
+    "sliding",
+    "moving"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ]
+}
