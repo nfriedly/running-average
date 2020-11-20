@@ -1,6 +1,10 @@
-# running-average [![NPM version][npm-image]][npm-url] ![Bower Version][bower-image] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Memory-efficient module that tracks the average value of an unlimited quantity of numbers
+# running-average 
 
+[![NPM version][npm-image]][npm-url]
+![Bower Version][bower-image]
+![Node.js CI](https://github.com/nfriedly/running-average/workflows/Node.js%20CI/badge.svg)
+
+Memory-efficient module that tracks the average value of an unlimited quantity of numbers
 
 ## Install
 
