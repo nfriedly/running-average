@@ -59,8 +59,4 @@ MIT © [Nathan Friedly](http://nfriedly.com/)
 
 [npm-image]: https://badge.fury.io/js/running-average.svg
 [npm-url]: https://npmjs.org/package/running-average
-[travis-image]: https://travis-ci.org/nfriedly/running-average.svg?branch=master
-[travis-url]: https://travis-ci.org/nfriedly/running-average
-[daviddm-image]: https://david-dm.org/nfriedly/running-average.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/nfriedly/running-average
 [bower-image]: http://badge.fury.io/bo/running-average.svg
