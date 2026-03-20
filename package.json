@@ -1,7 +1,7 @@
 {
   "name": "running-average",
   "version": "2.0.3",
-  "description": "Memory-efficient module that tracks the average value of an unlimited quantity of numbers",
+  "description": "Memory-efficient module that tracks the current average value of an unlimited series of numbers",
   "homepage": "https://github.com/nfriedly/running-average",
   "repository": {
     "type": "git",
@@ -9,13 +9,13 @@
   },
   "author": {
     "name": "Nathan Friedly",
-    "email": "",
     "url": "http://nfriedly.com/"
   },
+  "type": "module",
+  "module": "./lib/running-average.js",
   "files": [
     "lib"
   ],
-  "main": "./lib/running-average.js",
   "keywords": [
     "average",
     "running",
@@ -26,19 +26,22 @@
     "moving"
   ],
   "devDependencies": {
-    "eslint": "^8.57.1",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-prettier": "^3.4.1",
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "globals": "^17.4.0",
     "husky": "^9.1.7",
     "jest": "^30.3.0",
-    "prettier": "^2.8.8",
-    "pretty-quick": "^3.3.1"
+    "prettier": "^3.8.1",
+    "pretty-quick": "^4.2.2"
   },
   "scripts": {
     "test": "npm run lint && npm run unit-test",
     "lint": "eslint .",
     "autofix": "eslint . --fix",
-    "unit-test": "jest"
+    "unit-test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "husky": {
     "hooks": {

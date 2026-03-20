@@ -1,31 +1,18 @@
 # running-average 
 
 [![NPM version][npm-image]][npm-url]
-![Bower Version][bower-image]
 ![Node.js CI](https://github.com/nfriedly/running-average/workflows/Node.js%20CI/badge.svg)
 
-Memory-efficient module that tracks the average value of an unlimited quantity of numbers
-
-## Install
-
-```sh
-$ npm install --save running-average
-```
-
-or
-
-```sh
-$ bower install approximate-number
-```
+Memory-efficient module that tracks the current average value of an unlimited series of numbers.
 
 
 ## Usage
 
 ```js
-var RunningAverage = require('running-average'); // or use window.RunningAverage in a browser w/out Require.js or Browserify
+import { RunningAverage } from 'running-average'; // ES modules
 
 // create an instance
-var runningAverage = new RunningAverage();
+const runningAverage = new RunningAverage();
 
 // push a number
 runningAverage.push(1);
@@ -50,7 +37,9 @@ runningAverage.push(10).push(11).getAverage(); // => 6
 
 ```
 
-Also see version 1.0 for a `windowSize` option to limit the average to the last *n* numbers, but be aware that it uses a less efficient algorithm.
+See version 2.x for a non-ESM version (CommonJS (`require(...)`)/UMD).
+
+Also see version 1.x for a `windowSize` option to limit the average to the last *n* numbers, but be aware that it uses a less efficient algorithm.
 
 ## License
 
